@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BtnToNaver from "./components/BtnToNaver";
+import ClassProps from "./components/ClassProps";
+import ClassState from "./components/ClassState";
+import Counter from "./components/Counter";
+import CustomList from "./components/CustomList";
+import CustomObj from "./components/CustomObj";
+import FunctionalState from "./components/FuntionalState";
+import ImgComponent from "./components/ImgComponent";
+import MainHeader from "./components/MainHeader";
+import ChangeObj from "./components/ChangeObj";
+import Comparing from "./components/Comparing";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Comparing />
     </div>
   );
 }
-
 export default App;
