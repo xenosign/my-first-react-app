@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./App.css";
 import BtnToNaver from "./components/BtnToNaver";
 import ClassProps from "./components/ClassProps";
 import ClassState from "./components/ClassState";
@@ -30,59 +30,21 @@ import TestInlineCSS from "./components/TestInlineCSS";
 import TestCssFile from "./components/TestCssFile";
 import TestStyled from "./components/TestStyled";
 import styled, { keyframes } from "styled-components";
-import logo from "./logo.svg";
-
-const rotation = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-const RootDiv = styled.div`
-  text-align: center;
-`;
-
-const AppHeader = styled.header`
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-`;
-
-const AppLogo = styled.img`
-  height: 40vmin;
-  pointer-events: none;
-  animation: ${rotation} infinite 20s linear;
-`;
-
-const MyA = styled.a`
-  color: #61dafb;
-`;
+import Images from "./components/Images";
+import Dialog from "./components/Dialog";
+import WelcomeDialog from "./components/WelcomeDialog";
+import FancyBorder from "./components/FancyBorder";
+import SignUpDialog from "./components/SignUpDialog";
 
 function App() {
   return (
-    <RootDiv>
-      <AppHeader>
-        <AppLogo src={logo} alt="app" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <MyA
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </MyA>
-      </AppHeader>
-    </RootDiv>
+    <div className="App">
+      <Dialog
+        // color="skyblue"
+        title={<button onClick={() => alert("Welcome")}>웰컴 버튼</button>}
+        message="회원 가입이 필요한 서비스 입니다!"
+      ></Dialog>
+    </div>
   );
 }
 export default App;
